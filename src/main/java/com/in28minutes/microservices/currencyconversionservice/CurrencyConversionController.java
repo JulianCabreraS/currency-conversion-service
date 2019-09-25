@@ -38,7 +38,7 @@ public class CurrencyConversionController {
                 response.getConversionMultiple(),
                 quantity,
                 quantity.multiply(response.getConversionMultiple()),
-                0);
+                response.getPort());
     }
     @GetMapping("/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversionBean convertCurrencyFeign(@PathVariable String from,
@@ -54,6 +54,6 @@ public class CurrencyConversionController {
                 response.getConversionMultiple(),
                 quantity,
                 quantity.multiply(response.getConversionMultiple()),
-                0);
+                response.getPort());
     }
 }
